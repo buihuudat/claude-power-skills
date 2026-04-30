@@ -1,0 +1,11 @@
+{
+  "name": "claude-power-skills",
+  "displayName": "Claude Power Skills",
+  "description": "9 battle-tested slash commands: /think, /ship, /debug, /audit, /refactor, /explain, /test, /perf, /pr — structured reasoning workflows for every engineering task.",
+  "version": "1.0.0",
+  "author": "YOUR_USERNAME",
+  "license": "MIT",
+  "category": "workflow",
+  "tags": ["productivity", "debugging", "workflow", "engineering", "best-practices"],
+  "skillsDirectory": "../commands"
+}

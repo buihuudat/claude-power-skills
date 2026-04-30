@@ -1,0 +1,21 @@
+{
+  "name": "claude-power-skills",
+  "version": "1.0.0",
+  "description": "9 battle-tested slash commands that give Claude structured reasoning workflows for debugging, shipping, auditing, refactoring, and more.",
+  "author": "YOUR_USERNAME",
+  "license": "MIT",
+  "keywords": ["skills", "commands", "workflow", "debug", "ship", "audit", "engineering"],
+  "category": "workflow",
+  "homepage": "https://github.com/YOUR_USERNAME/claude-power-skills",
+  "skills": [
+    "think",
+    "ship",
+    "debug",
+    "audit",
+    "refactor",
+    "explain",
+    "test",
+    "perf",
+    "pr"
+  ]
+}
