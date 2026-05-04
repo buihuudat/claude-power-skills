@@ -49,7 +49,7 @@ These skills fix all three by giving Claude explicit reasoning frameworks before
 
 ```bash
 # Clone and copy commands
-git clone https://github.com/YOUR_USERNAME/claude-power-skills.git
+git clone https://github.com/buihuudat/claude-power-skills.git
 cp commands/*.md ~/.claude/commands/
 ```
 
@@ -70,7 +70,7 @@ Add to your `~/.claude/settings.json`:
     "claude-power-skills": {
       "source": {
         "source": "git",
-        "url": "https://github.com/YOUR_USERNAME/claude-power-skills.git"
+        "url": "https://github.com/buihuudat/claude-power-skills.git"
       }
     }
   }

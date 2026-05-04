@@ -1,39 +1,39 @@
 # /ship — Ship Feature End-to-End
 
-Biến yêu cầu sau thành feature hoàn chỉnh, production-ready:
+Turn the following requirement into a complete, production-ready feature:
 
 **Feature:** $ARGUMENTS
 
 ---
 
-## Phase 1: Clarify (trước khi viết bất kỳ dòng code nào)
-1. Xác định scope chính xác — cái gì IN, cái gì OUT
-2. Xác định success criteria có thể verify được
-3. Xác định rủi ro và unknowns
-4. Nếu có ambiguity → hỏi ngay, không đoán
+## Phase 1: Clarify (before writing a single line of code)
+1. Define exact scope — what is IN, what is OUT
+2. Define verifiable success criteria
+3. Identify risks and unknowns
+4. If there is ambiguity → ask now, do not guess
 
-## Phase 2: Plan (tối đa 5 phút)
-Tạo checklist ngắn gọn các bước cần làm, với verification checkpoint sau mỗi bước lớn.
-Không lập kế hoạch quá chi tiết cho những gì chưa cần.
+## Phase 2: Plan (5 minutes max)
+Create a concise checklist of steps, with a verification checkpoint after each major step.
+Do not over-plan for things not yet needed.
 
 ## Phase 3: Implement (surgical, minimal)
-- Viết code tối thiểu cần thiết để đáp ứng success criteria
-- Không thêm features "phòng hờ tương lai"
-- Không refactor code không liên quan
-- Match style của codebase hiện tại
-- Sau mỗi bước lớn: verify checkpoint
+- Write the minimum code required to meet the success criteria
+- Do not add "just in case" features
+- Do not refactor unrelated code
+- Match the existing codebase style
+- After each major step: verify the checkpoint
 
 ## Phase 4: Test
-- Tự kiểm tra happy path
-- Tự kiểm tra edge cases đã identify ở Phase 1
-- Nếu có test suite: chạy và đảm bảo pass
-- Nếu không có test: viết ít nhất 1 test cho behavior quan trọng nhất
+- Manually verify the happy path
+- Manually verify the edge cases identified in Phase 1
+- If a test suite exists: run it and ensure it passes
+- If no tests exist: write at least 1 test for the most important behavior
 
 ## Phase 5: Ship Checklist
-- [ ] Code hoạt động đúng với success criteria đã định
-- [ ] Không có debug logs, TODO, hoặc dead code
-- [ ] Không có regression ở features liên quan
-- [ ] Diff gọn gàng — chỉ những gì cần thiết
+- [ ] Code works correctly against the defined success criteria
+- [ ] No debug logs, TODOs, or dead code
+- [ ] No regressions in related features
+- [ ] Clean diff — only what is necessary
 
 ---
-Output cuối: mô tả ngắn những gì đã làm và cách verify.
+Final output: a short description of what was done and how to verify it.

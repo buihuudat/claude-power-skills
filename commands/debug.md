@@ -1,41 +1,41 @@
 # /debug — Systematic Debugging
 
-Bug cần debug: $ARGUMENTS
+Bug to debug: $ARGUMENTS
 
 ---
 
-## Nguyên tắc: Không đoán. Chứng minh bằng evidence.
+## Rule: No guessing. Prove everything with evidence.
 
-## Step 1: Reproduce (xác nhận bug tồn tại)
-- Tìm cách reproduce bug một cách deterministic
-- Nếu không reproduce được → không thể fix được
-- Minimal reproduction case là gì?
+## Step 1: Reproduce (confirm the bug exists)
+- Find a way to reproduce the bug deterministically
+- If it cannot be reproduced → it cannot be fixed
+- What is the minimal reproduction case?
 
-## Step 2: Observe (thu thập data)
-- Actual behavior: [gì đang xảy ra]
-- Expected behavior: [gì nên xảy ra]
-- Khi nào xảy ra / không xảy ra?
-- Log, error message, stack trace đầy đủ
+## Step 2: Observe (collect data)
+- Actual behavior: [what is happening]
+- Expected behavior: [what should happen]
+- When does it occur / not occur?
+- Full logs, error messages, stack traces
 
-## Step 3: Hypothesize (đặt giả thuyết)
-Liệt kê 3-5 nguyên nhân có thể, từ cao xuống thấp theo xác suất:
-1. [Hypothesis A] — evidence ủng hộ: ..., evidence phản: ...
+## Step 3: Hypothesize (form hypotheses)
+List 3–5 possible causes, ranked from most to least likely:
+1. [Hypothesis A] — supporting evidence: ..., contradicting evidence: ...
 2. [Hypothesis B] — ...
 3. ...
 
 ## Step 4: Test Hypotheses (systematic elimination)
-Với mỗi hypothesis: thiết kế test nhỏ nhất có thể confirm/refute nó.
-Không fix gì cho đến khi xác định được root cause.
+For each hypothesis: design the smallest possible test to confirm or refute it.
+Do not fix anything until the root cause is identified.
 
 ## Step 5: Fix (surgical)
-- Fix đúng root cause, không fix symptom
-- Thay đổi tối thiểu
-- Giải thích tại sao fix này đúng
+- Fix the root cause, not the symptom
+- Minimal change
+- Explain why this fix is correct
 
 ## Step 6: Verify + Prevent
-- Chạy lại reproduction case → bug không còn
-- Kiểm tra regression
-- Thêm test để bug này không tái xuất
+- Re-run the reproduction case → bug is gone
+- Check for regressions
+- Add a test to prevent this bug from recurring
 
 ---
-Red flags cần tránh: "thử xem", "có thể là", fix-and-pray, thay đổi nhiều thứ cùng lúc.
+Red flags to avoid: "let's try this", "maybe it's", fix-and-pray, changing multiple things at once.

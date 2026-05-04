@@ -3,7 +3,7 @@
 ## Quick Install (30 seconds)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/claude-power-skills.git
+git clone https://github.com/buihuudat/claude-power-skills.git
 cp claude-power-skills/commands/*.md ~/.claude/commands/
 ```
 

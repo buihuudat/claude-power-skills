@@ -1,44 +1,44 @@
 # /pr — Create Pull Request
 
-Tạo PR cho: $ARGUMENTS
+Create a PR for: $ARGUMENTS
 
 ---
 
 ## Step 1: Review Changes
-Trước khi tạo PR, kiểm tra:
-- `git diff main...HEAD` — xem toàn bộ changes
-- Có file nào không nên commit không? (.env, secrets, debug logs)
-- Diff có gọn không? Có "drive-by" changes không?
+Before creating the PR, check:
+- `git diff main...HEAD` — view all changes
+- Are there files that should not be committed? (.env, secrets, debug logs)
+- Is the diff clean? Are there any "drive-by" changes?
 
 ## Step 2: PR Title
-Format: `<type>: <mô tả ngắn gọn>` (dưới 70 ký tự)
+Format: `<type>: <short description>` (under 70 characters)
 Types: `feat`, `fix`, `refactor`, `perf`, `test`, `docs`, `chore`
 
 ## Step 3: PR Description
 
 ### What
-- Thay đổi gì? (facts, không cần giải thích dài)
+- What changed? (facts, no long explanations needed)
 
-### Why  
-- Tại sao cần thay đổi này? Business context, bug report, performance data
+### Why
+- Why is this change needed? Business context, bug report, performance data
 
-### How (chỉ khi approach không obvious)
-- Quyết định design quan trọng nào?
-- Alternatives nào đã được cân nhắc và loại bỏ?
+### How (only when the approach is not obvious)
+- What important design decisions were made?
+- What alternatives were considered and rejected?
 
 ### Test Plan
-- [ ] Happy path: [mô tả cụ thể]
-- [ ] Edge cases: [mô tả]
-- [ ] Regression: [gì đã được verify không bị break]
+- [ ] Happy path: [specific description]
+- [ ] Edge cases: [description]
+- [ ] Regression: [what was verified not to be broken]
 
-### Screenshots/Demo (nếu UI changes)
+### Screenshots/Demo (if UI changes)
 
 ## Step 4: Self-Review Checklist
-- [ ] Code hoạt động đúng với mục tiêu đã định
-- [ ] Không có TODO/FIXME mới chưa được track
-- [ ] Không có console.log/print debug
+- [ ] Code works correctly against the stated goal
+- [ ] No new untracked TODOs/FIXMEs
+- [ ] No console.log/print debug statements
 - [ ] Tests pass
-- [ ] Diff sạch — chỉ những gì cần thiết
+- [ ] Clean diff — only what is necessary
 
 ---
-Tạo PR sau khi checklist hoàn chỉnh.
+Create the PR only after the checklist is complete.

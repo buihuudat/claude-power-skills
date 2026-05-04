@@ -4,37 +4,37 @@ Refactor target: $ARGUMENTS
 
 ---
 
-## Nguyên tắc: Refactor = thay đổi structure, KHÔNG thay đổi behavior.
+## Rule: Refactor = change structure, NOT behavior.
 
-## Step 1: Define Scope (không mở rộng tùy tiện)
-- Chính xác cái gì cần refactor và TẠI SAO
-- Ranh giới rõ ràng: cái gì sẽ thay đổi, cái gì sẽ KHÔNG thay đổi
-- Nếu không có lý do cụ thể → không refactor
+## Step 1: Define Scope (no scope creep)
+- Exactly what needs refactoring and WHY
+- Clear boundary: what will change, what will NOT change
+- If there is no specific reason → do not refactor
 
 ## Step 2: Safety Net
-- Tests hiện tại có cover behavior này không?
-- Nếu không → viết characterization tests TRƯỚC KHI refactor
-- "Không thay đổi behavior" phải verify được, không chỉ là lời nói
+- Do existing tests cover this behavior?
+- If not → write characterization tests BEFORE refactoring
+- "Behavior unchanged" must be verifiable, not just claimed
 
-## Step 3: Refactor (từng bước nhỏ)
-Mỗi bước:
-1. Thay đổi nhỏ
-2. Tests vẫn pass
-3. Commit (hoặc checkpoint)
-4. Bước tiếp theo
+## Step 3: Refactor (small steps)
+Each step:
+1. Make a small change
+2. Tests still pass
+3. Commit (or checkpoint)
+4. Next step
 
-Không "big bang" refactor toàn bộ rồi mới test.
+No "big bang" refactoring of everything at once before testing.
 
 ## Step 4: Code Quality Check
-Sau refactor, kiểm tra:
-- [ ] Behavior giống hệt trước (tests pass)
-- [ ] Code dễ đọc hơn (hoặc ít nhất không tệ hơn)
-- [ ] Không có abstractions mới chưa cần thiết
-- [ ] Không có dead code mới
+After refactoring, verify:
+- [ ] Behavior is identical to before (tests pass)
+- [ ] Code is easier to read (or at least no worse)
+- [ ] No new unnecessary abstractions
+- [ ] No new dead code
 
 ## Step 5: Diff Review
-- Diff có gọn không? Có thay đổi ngoài scope không?
-- Nếu có → revert những thay đổi ngoài scope
+- Is the diff clean? Are there any out-of-scope changes?
+- If yes → revert the out-of-scope changes
 
 ---
-Nếu refactor dẫn đến "cần thay đổi thêm X, Y, Z" → dừng lại và tách thành các task riêng.
+If the refactor leads to "we also need to change X, Y, Z" → stop and split into separate tasks.

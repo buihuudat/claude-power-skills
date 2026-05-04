@@ -1,46 +1,46 @@
 # /audit — Full Code Audit
 
-Thực hiện audit toàn diện cho: $ARGUMENTS
+Perform a comprehensive audit of: $ARGUMENTS
 
 ---
 
 ## 1. Correctness
 - Logic bugs, off-by-one errors, wrong conditionals
-- Null/undefined/empty cases không được handle
-- Type mismatches, implicit coercions nguy hiểm
+- Null/undefined/empty cases not handled
+- Type mismatches, dangerous implicit coercions
 - Concurrent access issues (race conditions, shared mutable state)
 
 ## 2. Security (OWASP Top 10 mindset)
 - Injection vulnerabilities (SQL, command, XSS, path traversal)
 - Authentication & authorization gaps
-- Sensitive data exposure (secrets hardcoded, logging PII)
-- Input validation ở system boundaries
-- Dependency vulnerabilities nổi bật
+- Sensitive data exposure (hardcoded secrets, logging PII)
+- Input validation at system boundaries
+- Notable dependency vulnerabilities
 
 ## 3. Performance
 - N+1 queries, unnecessary loops, redundant computation
 - Memory leaks, unbounded growth
-- Blocking operations trong async context
+- Blocking operations in async context
 - Missing indexes, inefficient data structures
 
 ## 4. Code Quality
-- Functions/classes làm nhiều hơn một việc
-- Abstractions chưa earn được (YAGNI violations)
+- Functions/classes doing more than one thing
+- Unearned abstractions (YAGNI violations)
 - Dead code, unreachable branches
 - Inconsistent naming, style violations
 
 ## 5. Reliability
-- Error handling thiếu hoặc sai
-- Retry logic cho external calls
+- Missing or incorrect error handling
+- Retry logic for external calls
 - Timeout handling
 - Graceful degradation
 
 ---
 
 ## Output Format
-Với mỗi issue tìm được:
+For each issue found:
 **[SEVERITY: CRITICAL/HIGH/MEDIUM/LOW]** `file:line`
-> Mô tả vấn đề cụ thể
-> Suggested fix (code snippet nếu cần)
+> Specific description of the problem
+> Suggested fix (code snippet if needed)
 
-Kết thúc bằng: top 3 issues cần fix ngay nhất.
+End with: the top 3 issues to fix immediately.

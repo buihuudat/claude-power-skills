@@ -1,47 +1,47 @@
 # /test — Generate Comprehensive Tests
 
-Viết tests cho: $ARGUMENTS
+Write tests for: $ARGUMENTS
 
 ---
 
-## Nguyên tắc: Tests phải catch real bugs, không phải chỉ để coverage.
+## Rule: Tests must catch real bugs, not just exist for coverage.
 
-## Step 1: Understand Behavior (đọc code trước)
-- Public contract là gì? (inputs → outputs)
-- Side effects cần verify
-- Error cases được document không?
+## Step 1: Understand Behavior (read the code first)
+- What is the public contract? (inputs → outputs)
+- Which side effects need to be verified
+- Are error cases documented?
 
 ## Step 2: Test Categories
 
 ### Happy Path
-- Typical use case với input bình thường
-- Verify output chính xác
+- Typical use case with normal input
+- Verify the output is correct
 
-### Edge Cases (quan trọng nhất)
+### Edge Cases (most important)
 - Empty/null/undefined inputs
 - Boundary values (0, 1, max, max+1)
 - Empty collections, single-item collections
-- Unicode, special characters (nếu xử lý strings)
+- Unicode, special characters (if handling strings)
 
 ### Error Cases
-- Invalid inputs → error messages đúng không?
-- External failures (network, DB) → handle gracefully không?
-- Concurrent access (nếu relevant)
+- Invalid inputs → are error messages correct?
+- External failures (network, DB) → handled gracefully?
+- Concurrent access (if relevant)
 
 ### Regression Tests
-- Nếu đang fix bug: viết test reproduce bug TRƯỚC, verify nó fail, rồi fix
+- If fixing a bug: write a test that reproduces the bug FIRST, verify it fails, then fix
 
 ## Step 3: Test Quality Check
-Với mỗi test:
-- [ ] Tên test mô tả behavior, không mô tả implementation
-- [ ] Một test chỉ test một thing
-- [ ] Assert rõ ràng, không ambiguous
-- [ ] Test độc lập (không phụ thuộc order, global state)
-- [ ] Nhanh (mock external dependencies)
+For each test:
+- [ ] Test name describes behavior, not implementation
+- [ ] One test tests one thing
+- [ ] Clear, unambiguous assertions
+- [ ] Test is independent (no dependency on order or global state)
+- [ ] Fast (mock external dependencies)
 
 ## Step 4: Coverage Assessment
-- Những behavior nào vẫn chưa được test?
-- Có worthwhile để test không hay over-testing?
+- Which behaviors are still untested?
+- Is it worthwhile to test them or is it over-testing?
 
 ---
-Ưu tiên test behavior quan trọng > đạt 100% coverage.
+Prioritize testing important behavior over achieving 100% coverage.
